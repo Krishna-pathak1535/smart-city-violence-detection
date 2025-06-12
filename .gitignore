@@ -1,0 +1,31 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Virtual environment directory
+venv/
+
+# Streamlit specific temporary/cache files
+.streamlit/
+.tmp/
+
+# TensorFlow/Keras saved model backups or checkpoints that aren't the final .h5
+*.h5.temp
+*.ckpt
+checkpoints/
+
+# Operating System specific files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Ignore all Markdown files as requested
+*.md
+
+# If you only wanted to ignore README.md specifically, you'd use:
+# README.md
+
+# Ignore the downloaded Kaggle dataset and its zip file
+# This prevents pushing large datasets to your repo
+smartcity-cctv-violence-detection-dataset-scvd.zip
+scvd_dataset/
+random_50_videos_per_category.zip
