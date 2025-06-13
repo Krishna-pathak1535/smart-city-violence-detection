@@ -1,5 +1,5 @@
 ````markdown
-# 🚨 Smart-City CCTV Violence Detection System
+🚨 Smart-City CCTV Violence Detection System
 
 [![GitHub Stars](https://img.shields.io/github/stars/Krishna-pathak1535/smart-city-violence-detection?style=social)](https://github.com/Krishna-pathak1535/smart-city-violence-detection)
 [![GitHub Forks](https://img.shields.io/github/forks/Krishna-pathak1535/smart-city-violence-detection?style=social)](https://github.com/Krishna-pathak1535/smart-city-violence-detection)
@@ -29,7 +29,7 @@ The system operates as a streamlined, end-to-end video analysis pipeline:
     At its heart, a sophisticated Convolutional Neural Network (CNN) combined with a Long Short-Term Memory (LSTM) network processes incoming video frames. This core extracts spatio-temporal features to accurately classify the video segment into one of three predefined categories: "Normal," "Violence," or "Weaponized."
 
 3.  **Real-time Prediction & Alerting System:**
-    Provides instantaneous prediction results (category and confidence score) directly on the web interface. Critical classifications like "Violence" or "Weaponized" trigger immediate visual alerts to prompt rapid human intervention.
+    Provides instantaneous prediction results (category and confidence score) directly on the web interface, complemented by immediate visual alerts for detected threats.
 
 4.  **Interactive Web User Interface (UI):**
     A modern and user-friendly Streamlit application serves as the primary interface. It simplifies video upload, enables integrated video playback alongside analysis, and offers clear visualization of AI-generated predictions, making the system accessible to non-technical users.
@@ -69,21 +69,21 @@ streamlit run app.py
       * **Initial UI:**
 
         \<p align="center"\>
-        \<img src="assets/images/initial\_ui.png" alt="Initial App UI Screenshot"\>
+        \<img src="assets/images/initial\_ui\_screenshot.png" alt="Initial App UI Screenshot"\>
         \<br\>\<em\>The clean, inviting interface ready for video upload.\</em\>
         \</p\>
 
       * **Video Playback & Awaiting Analysis:**
 
         \<p align="center"\>
-        \<img src="assets/images/video\_playback.png" alt="Video Playback Screenshot"\>
-        \<br\>\<em\>Video playing seamlessly before triggering AI analysis.\</em\>
+        \<img src="assets/images/video\_playback\_after\_upload.png" alt="Video Playback Screenshot"\>
+        \<br\>\<em\>Video playing seamlessly after upload.\</em\>
         \</p\>
 
       * **Prediction Result (e.g., Normal):**
 
         \<p align="center"\>
-        \<img src="assets/images/prediction\_normal.png" alt="Prediction Result Normal Screenshot"\>
+        \<img src="assets/images/prediction\_normal\_result.png" alt="Prediction Result Normal Screenshot"\>
         \<br\>\<em\>Example of a 'Normal' activity prediction with high confidence.\</em\>
         \</p\>
 
@@ -91,7 +91,11 @@ streamlit run app.py
 
         \<p align="center"\>
         \<img src="assets/images/prediction\_violence\_alert.png" alt="Prediction Result Alert Screenshot"\>
-        \<br\>\<em\>Critical alert for detected violence or weaponized activity.\</em\>
+        \<br\>\<em\>Critical alert for detected violence activity.\</em\>
+        \</p\>
+        \<p align="center"\>
+        \<img src="assets/images/prediction\_weaponized\_alert.png" alt="Prediction Result Weaponized Alert Screenshot"\>
+        \<br\>\<em\>Alternative alert for weaponized activity detection.\</em\>
         \</p\>
 
 -----
@@ -196,11 +200,11 @@ The dataset videos are originally in `.avi` format, which may not play correctly
     Then, execute this PowerShell command to convert all `.avi` files in that folder and its subdirectories to `.mp4`:
 
     ```powershell
-    Get-ChildItem -Path . -Recurse -Include *.avi | ForEach-Object {
+    Get-ChildItem -Path. -Recurse -Include *.avi | ForEach-Object {
         $inputPath = $_.FullName
         $outputPath = Join-Path $_.Directory.FullName ($_.BaseName + "-converted.mp4")
         Write-Host "Converting $($_.Name)..."
-        ffmpeg -i "$inputPath" -c:v libx264 -preset medium -crf 23 -c:a aac -b:a 128k -vf format=yuv420p "$outputPath" -y
+        ffmpeg -i "$inputPath" -c:v libx264 -preset medium -crf 23 -c: a aac -b :a 128k -vf format=yuv420p "$outputPath" -y
         Write-Host "Converted to $($outputPath)"
     }
     Write-Host "All conversions complete!"
@@ -212,7 +216,7 @@ The dataset videos are originally in `.avi` format, which may not play correctly
     Once all conversions are verified, you can delete the original `.avi` files to free up disk space:
 
     ```powershell
-    Get-ChildItem -Path . -Recurse -Include *.avi | Remove-Item -Force
+    Get-ChildItem -Path. -Recurse -Include *.avi | Remove-Item -Force
     ```
 
 ### **6. Run the Streamlit Application**
@@ -220,7 +224,7 @@ The dataset videos are originally in `.avi` format, which may not play correctly
 Ensure your virtual environment is active, then launch the Streamlit app.
 
 ```powershell
-# If you changed directory for video conversion, navigate back to the root of your project
+# If you changed the directory for video conversion, navigate back to the root of your project
 # e.g., cd C:\Users\Krish\OneDrive\Desktop\smart-city-violence-detection
 
 # Ensure the virtual environment is active
@@ -252,21 +256,6 @@ Contributions are highly welcomed\! Feel free to fork this repository and contri
 
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/Krishna-pathak1535/smart-city-violence-detection/blob/main/LICENSE) file in the repository for full details.
 
-## 🙏 Acknowledgements
-
-We extend our sincere gratitude to the following resources and communities:
-
-  * **Google Colab:** For generously providing essential GPU computing resources for efficient model training.
-
-  * **Kaggle:** For hosting and facilitating access to the Smart-City CCTV Violence Detection Dataset.
-
-  * **FFmpeg:** An indispensable open-source tool critical for robust video transcoding and compatibility.
-
-  * **Streamlit:** For empowering the rapid development of such a user-friendly and visually appealing web application.
-
-  * **TensorFlow & Keras:** For providing the foundational deep learning framework that underpins our AI model.
-
-  * **OpenCV:** For its versatile functionalities in video processing and frame manipulation.
 
 ## 📧 Contact
 
