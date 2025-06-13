@@ -1,4 +1,4 @@
-# 🚨 Smart-City CCTV Violence Detection System
+[# 🚨 Smart-City CCTV Violence Detection System
 
 [![GitHub Stars](https://img.shields.io/github/stars/Krishna-pathak1535/smart-city-violence-detection?style=social)](https://github.com/Krishna-pathak1535/smart-city-violence-detection)
 [![GitHub Forks](https://img.shields.io/github/forks/Krishna-pathak1535/smart-city-violence-detection?style=social)](https://github.com/Krishna-pathak1535/smart-city-violence-detection)
@@ -330,7 +330,4 @@ LinkedIn: https://www.linkedin.com/in/krishnanand-pathak/
 
 Email: krishna.pathak2003@gmail.com
 
-<!-- end list -->
-
-
----
+--------
