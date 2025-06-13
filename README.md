@@ -60,94 +60,42 @@ An **AI-driven solution for Smart-City CCTV Violence Detection** that automatica
 
 Run locally:
 
-\`\`\`bash
+```bash
 streamlit run app.py
-\`\`\`
+```
 
 <p align="center">
-  <img src="assets/app_demo.gif" alt="App Demo" />
+  <img src="assets/app_demo.gif" alt="App Demo" width="600"/>
 </p>
 
 ---
 
-## ⚙️ Local Setup Guide
+## **Key Screenshots**
 
-1. **Prerequisites**  
-   - Python 3.8+ (https://www.python.org)  
-   - Git (https://git-scm.com)  
-   - FFmpeg  
-     \`\`\`powershell
-     winget install "FFmpeg (Essentials Build)"
-     \`\`\`
+<p align="center">
+  <img src="assets/initial_ui_screenshot.png" alt="Initial App UI Screenshot" width="600"/>
+  <br><em>The clean, inviting interface ready for video upload.</em>
+</p>
 
-2. **Clone Repo**  
-   \`\`\`powershell
-   git lfs install
-   git clone https://github.com/Krishna-pathak1535/smart-city-violence-detection.git
-   cd smart-city-violence-detection
-   \`\`\`
+<p align="center">
+  <img src="assets/video_playback_after_upload.png" alt="Video Playback Screenshot" width="600"/>
+  <br><em>Video playing seamlessly after upload.</em>
+</p>
 
-3. **Virtual Environment**  
-   \`\`\`powershell
-   python -m venv venv
-   .\venv\Scripts\activate
-   \`\`\`
+<p align="center">
+  <img src="assets/prediction_normal_result.png" alt="Prediction Result Normal Screenshot" width="600"/>
+  <br><em>Example of a 'Normal' activity prediction with high confidence.</em>
+</p>
 
-4. **Install Dependencies**  
-   \`\`\`bash
-   pip install tensorflow opencv-python numpy scikit-learn streamlit tqdm
-   \`\`\`
+<p align="center">
+  <img src="assets/prediction_violence_alert.png" alt="Prediction Result Alert Screenshot" width="600"/>
+  <br><em>Critical alert for detected violence activity.</em>
+</p>
 
-5. **Prepare Sample Videos**  
-   - Download and extract \`random_50_videos_per_category.zip\` into \`sample_videos_for_testing\`.  
-   - Convert \`.avi\` to \`.mp4\`:
-     \`\`\`powershell
-     Get-ChildItem -Recurse -Include *.avi | ForEach-Object {
-       ffmpeg -i "$_" -c:v libx264 -preset medium -crf 23 -c:a aac -b:a 128k -vf format=yuv420p "${($_.BaseName)}-converted.mp4" -y
-     }
-     \`\`\`
-
-6. **Run the App**  
-   \`\`\`bash
-   streamlit run app.py
-   \`\`\`
-
----
-
- * **Key Screenshots:**
-
-      * **Initial UI:**
-
-        \<p align="center"\>
-        \<img src="assets/images/initial\_ui\_screenshot.png" alt="Initial App UI Screenshot"\>
-        \<br\>\<em\>The clean, inviting interface ready for video upload.\</em\>
-        \</p\>
-
-      * **Video Playback & Awaiting Analysis:**
-
-        \<p align="center"\>
-        \<img src="assets/images/video\_playback\_after\_upload.png" alt="Video Playback Screenshot"\>
-        \<br\>\<em\>Video playing seamlessly after upload.\</em\>
-        \</p\>
-
-      * **Prediction Result (e.g., Normal):**
-
-        \<p align="center"\>
-        \<img src="assets/images/prediction\_normal\_result.png" alt="Prediction Result Normal Screenshot"\>
-        \<br\>\<em\>Example of a 'Normal' activity prediction with high confidence.\</em\>
-        \</p\>
-
-      * **Prediction Result (e.g., Violence/Weaponized Alert):**
-
-        \<p align="center"\>
-        \<img src="assets/images/prediction\_violence\_alert.png" alt="Prediction Result Alert Screenshot"\>
-        \<br\>\<em\>Critical alert for detected violence activity.\</em\>
-        \</p\>
-        \<p align="center"\>
-        \<img src="assets/images/prediction\_weaponized\_alert.png" alt="Prediction Result Weaponized Alert Screenshot"\>
-        \<br\>\<em\>Alternative alert for weaponized activity detection.\</em\>
-        \</p\>
-
+<p align="center">
+  <img src="assets/prediction_weaponized_alert.png" alt="Prediction Result Weaponized Alert Screenshot" width="600"/>
+  <br><em>Alternative alert for weaponized activity detection.</em>
+</p>
 
 ---
 
@@ -167,17 +115,12 @@ Contributions are welcome! Fork, issue, or PR. For major changes, please open an
 
 ## 📄 License
 
-This project is licensed under the MIT License. See \`LICENSE\`.
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
 
 ---
 
 ## 📧 Contact
 
-**GitHub:**  
-https://github.com/Krishna-pathak1535  
-
-**LinkedIn:**  
-https://www.linkedin.com/in/krishnanand-pathak/  
-
-**Email:**  
-krishna.pathak2003@gmail.com  
+**GitHub:** [Krishna-pathak1535](https://github.com/Krishna-pathak1535)  
+**LinkedIn:** [krishnanand-pathak](https://www.linkedin.com/in/krishnanand-pathak/)  
+**Email:** krishna.pathak2003@gmail.com  
